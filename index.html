@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1e0f2a">
+<title>Happy Birthday, Arthi 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+<button id="mute" aria-label="Toggle music">🔊</button>
+
+<!-- 1. Surprise -->
+<section id="s1" class="stage active">
+  <div class="gift" aria-hidden="true">🎁</div>
+  <h2>Arthi, this one is for you.</h2>
+  <button id="open" class="btn">Open it</button>
+</section>
+
+<!-- 2. Title + cake -->
+<section id="s2" class="stage">
+  <h1><span class="split hb">Happy Birthday</span><span class="split nm">Arthi</span></h1>
+  <svg id="cake" viewBox="0 0 260 250" role="img" aria-label="Birthday cake with three candles">
+    <ellipse cx="130" cy="230" rx="122" ry="14" fill="#12071a" opacity=".6"/>
+    <rect x="30" y="158" width="200" height="68" rx="14" fill="#ff8fab"/>
+    <rect x="55" y="104" width="150" height="58" rx="12" fill="#ffd6df"/>
+    <rect x="80" y="58" width="100" height="50" rx="10" fill="#fff5ee"/>
+    <path d="M30 170q12.5 24 25 0t25 0t25 0t25 0t25 0t25 0t25 0t25 0V158H30z" fill="#fff5ee"/>
+    <path d="M55 116q9.4 18 18.75 0t18.75 0t18.75 0t18.75 0t18.75 0t18.75 0t18.75 0t18.75 0V104H55z" fill="#ff8fab"/>
+    <g fill="#ffc872"><rect x="101" y="30" width="8" height="30" rx="2"/><rect x="126" y="30" width="8" height="30" rx="2"/><rect x="151" y="30" width="8" height="30" rx="2"/></g>
+    <g class="flames"><ellipse class="flame" cx="105" cy="20" rx="5" ry="9" fill="#ffb347"/><ellipse class="flame" cx="130" cy="20" rx="5" ry="9" fill="#ffb347"/><ellipse class="flame" cx="155" cy="20" rx="5" ry="9" fill="#ffb347"/></g>
+  </svg>
+  <p id="wishline" class="pending sub">Make a wish, Arthi ✨</p>
+  <button id="blow" class="btn late">Blow the candles</button>
+  <button id="toLetter" class="btn pending">Read my wish for you</button>
+</section>
+
+<!-- 3. Letter -->
+<section id="s3" class="stage top">
+  <h2>For Arthi</h2>
+  <article id="letter" class="paper typing" aria-live="polite"></article>
+  <button id="skip" class="ghost">Skip typing</button>
+  <button id="toGallery" class="btn pending">See our moments</button>
+</section>
+
+<!-- 4. Gallery -->
+<section id="s4" class="stage top">
+  <h2>Some of our moments</h2>
+  <p class="sub">Tap a photo to open it</p>
+  <div id="gallery" class="gallery"></div>
+  <button id="toFinale" class="btn">One last thing</button>
+</section>
+
+<!-- 5. Finale -->
+<section id="s5" class="stage">
+  <div class="gift" aria-hidden="true">💖</div>
+  <h1 class="end">Happy Birthday,<br>dearest Barishaillah monu.</h1>
+  <p id="sender" class="sub"></p>
+  <button id="again" class="ghost">Watch again</button>
+</section>
+
+<div id="lb" hidden>
+  <button class="x" aria-label="Close">✕</button>
+  <button class="nav prev" aria-label="Previous">‹</button>
+  <img alt="">
+  <button class="nav next" aria-label="Next">›</button>
+</div>
+
+<script src="photos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
